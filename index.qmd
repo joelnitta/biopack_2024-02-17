@@ -1,5 +1,4 @@
 ---
-title: "無料プログラミングワークショップの翻訳を可能にするRパッケージdovetailの紹介"
 format:
   revealjs:
     incremental: false
@@ -37,41 +36,160 @@ html:
 options(width = 80)
 ```
 
+## 無料プログラミングワークショップの翻訳を可能にするRパッケージdovetailの紹介
+
+::: {.columns}
+::: {.column width="60%"}
+**ニッタ ジョエル**
+
+[<https://joelnitta.com>]{.medium}
+
+[千葉大学 大学院国際学術研究院]{.medium}
+
+[Bio"Pack"athon 2024 #2 2024.02.17]{.medium}
+
+:::
+::: {.column width="40%" .medsmall}
+<div style="position: relative; top: -80px;">
+![chatGPTによる画像](images/chatgpt_title.png){width="300"}
+</div>
+:::
+:::
+
 ## なぜこんなパッケージを作る？
 
 - 私はパッケージ開発だけでなく、**研究用のプログラミングを教えること**に興味がある
-  - 授業で学ぶコンピューターサイエンスではなく、研究者が実際に使う**ツール**や**ベストプラクティス**
+<!--  - 授業で学ぶコンピューターサイエンスではなく、研究者が実際に使う**ツール**や**ベストプラクティス** -->
 
-- アメリカを始め、海外では「Software Carpentry」（SWC）という**研究者向けワークショップ**が最近とても人気になっている
-  - そもそも私がBiopackathonに参加できるようになったのは、SWCがきっかけ　
+
+::: {.columns}
+::: {.column}
+
+![](https://2.bp.blogspot.com/-3Zik2AGqMlM/W-0gea-VWRI/AAAAAAABQKE/b0xXQ9ZeGJIOyS_1xqt_qHRmrmtOf6J7ACLcBGAs/s400/computer_typing_osoi.png){fig-alt="alt-text" height="350"}
+
+:::
+::: {.column}
+
+![](https://2.bp.blogspot.com/-Gp2_6OZJ1FQ/XASwZmJF9yI/AAAAAAABQZ0/C8dUDl0e_uEWbDjvwNAo8DArlJX4vIaFwCLcBGAs/s400/computer_programming_man.png){fig-alt="alt-text" height="400"}
+
+:::
+:::
+
+## ワークショップ型教育は効率が良い
+
+- アメリカを始め、海外では**「Software Carpentry」**（SWC）という**研究者向けワークショップ**が最近とても人気になっている
+<!--  - そもそも私がBiopackathonに参加できるようになったのは、SWCがきっかけ　-->
+
+![](https://github.com/joelnitta/swc-trans-2020-12-10/blob/main/images/swc_header.png?raw=true){fig-align="center"}
 
 ## Software Carpentry (SWC)とは？
 
-- 研究者が研究者（大学院生、ポスドクなど）に教えるワークショップ
+- 研究者（大学院生、ポスドクなど）が研究者に教えるワークショップ
 
-- 無料（あるいは、少額の参加費）
+- **無料**（あるいは、少額の参加費）
 
-- ワークショップの内容が全てGitHubでオープンに管理されている
-  - CC-BY ライセンス（誰でも自由に使える）
+- ワークショップの内容が全てGitHubで**オープンに管理**されている
+  - CC-BY ライセンス（**誰でも自由に使える**）
+
+![](https://software-carpentry.org/files/workshops/mit-2013-slice.jpg){fig-align="center"}
 
 ## アメリカで始まったが、徐々に世界中に広がっている
 
+![](https://raw.githubusercontent.com/joelnitta/swc-trans-2020-12-10/main/images/map.png){fig-align="center"}
+
+開かれたワークショップの数（2020年）
+
 ## でも、まだ翻訳システムが成立していない
 
-## ワークショップの内容はRパッケージによってレンダーされている
+- ワークショップの内容は**英語**
 
-- 形式を気にしないで、内容だけに集中できる
+![](https://raw.githubusercontent.com/joelnitta/swc-trans-2020-12-10/main/images/swc-core-lessons.png){fig-align="center"}
 
-- GitHub Actions によってサイトが自動的にレンダーされ、サーブされる
+## ワークショップの内容はRパッケージ「sandpaper」によってレンダー
+
+::: {.columns}
+::: {.column width="70%"}
+
+- 形式を気にしないで、**内容だけに集中**できる
+
+- GitHub Actions によってサイトが**自動的**にレンダーされ、サーブされる
+
+:::
+::: {.column width="30%"}
+![](https://carpentries.github.io/sandpaper/logo.png){fig-alt="alt-text" width="250"}
+:::
+:::
+
+![](images/sandpaper-flow.png){fig-align="center"}
+
+---
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/targets-code.png)
+:::
+::: {.column width="60%"}
+![](images/targets-rendered.png)
+:::
+:::
+
+<https://carpentries-incubator.github.io/targets-workshop>
 
 ## 翻訳を書くのは、Crowdinを使う
 
-- 数多くの参加者が簡単に翻訳できるシステム
+::: {.columns}
+::: {.column width="70%"}
+- 数多くの参加者が**簡単に翻訳できる**プラットフォーム
 
-- ワークショップの内容はQuarto Markdownで書かれているが、Crowdinのパーサーによって内容だけを翻訳できる(Markdown記号が出て来ない)
+- ワークショップの内容はQuarto Markdownで書かれているが、Crowdinのパーサーによって内容だけを翻訳できる(**Markdown記号が出て来ない**)
+:::
+::: {.column width="30%"}
+![](https://support.crowdin.com/assets/logos/crowdin-stacked-logo.png)
+:::
+:::
 
-## dovetailが自動的に翻訳されたサイトをレンダーする
+---
 
-- GitHub Actions で言語を選択すると、選ばれた言語に翻訳されたサイトが出来上がる
+![](images/crowdin.png){fig-align="center"}
+
+<https://bioconductor.crowdin.com/git-novice>
+
+# どうやって翻訳された内容をレンダーする？
+
+## 「dovetail」が自動的に翻訳されたサイトをレンダーする
+
+- <http://github.com/joelnitta/dovetail>
+
+- GitHub Actions で言語を選択すると、その言語に**翻訳されたサイトがレンダーされる**
 
 - ローカル（自分のパソコン）でも可能
+
+---
+
+![](images/dovetail-deploy.png){fig-align="center"}
+
+<https://github.com/swcarpentry-ja/git-novice/blob/main/.github/workflows/sandpaper-main.yaml>
+
+---
+
+![](images/git-novice-eng.png){fig-align="center"}
+
+<https://swcarpentry.github.io/git-novice/>  
+ソース：<https://github.com/swcarpentry/git-novice>
+
+---
+
+![](images/git-novice-ja.png){fig-align="center"}
+
+<https://swcarpentry-ja.github.io/git-novice/>  
+ソース：<https://github.com/swcarpentry-ja/git-novice>
+
+## まとめ
+
+- 研究者むけワークショップでプログラミングを教えるのが**効率が良い**
+  - 教育効果
+  - コミュニティー形成
+
+- アメリカで開発されたワークショップを日本で開きたい
+
+- 皆様のご参加を楽しみにしています！
