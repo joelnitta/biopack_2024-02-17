@@ -56,6 +56,26 @@ options(width = 80)
 :::
 :::
 
+## 自己紹介
+
+::: {.columns}
+::: {.column}
+
+[@joelnitta@fosstodon.org](https://fosstodon.org/@joelnitta)
+
+<https://joelnitta.com>
+
+- 千葉大学 大学院国際学術研究院 准教授
+
+- 研究テーマ：**シダ植物**の<br>進化、生態学
+
+- 趣味：マラソン
+:::
+::: {.column}
+![](https://github.com/joelnitta/joelnitta-site/blob/master/static/media/headers/research_img2.jpg?raw=true){height="500"}
+:::
+:::
+
 ## なぜこのようなパッケージを作る？
 
 - 私はパッケージ開発だけでなく、**研究用のプログラミングを教えること**に興味がある
