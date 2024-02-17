@@ -1,0 +1,77 @@
+---
+title: "無料プログラミングワークショップの翻訳を可能にするRパッケージdovetailの紹介"
+format:
+  revealjs:
+    incremental: false
+    css: styles.css
+    include-in-header: 
+      text: |
+        <style>
+        .center-xy {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translateY(-50%), translateX(-50%);
+          transform: translateY(-50%), translateX(-50%);
+        }
+        .center-x {
+          margin: 0;
+          position: absolute;
+          left: 50%;
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+        </style>
+execute: 
+  echo: true
+author: ニッタ ジョエル
+institute: <a href="https://joelnitta.com">https://joelnitta.com</a>
+footer: <a href="https://joelnitta.github.io/biopack_2024-02-17">https://joelnitta.github.io/biopack_2024-02-17</a>
+html:
+  mathjax: true
+---
+
+```{r}
+#| echo: false
+options(width = 80)
+```
+
+## なぜこんなパッケージを作る？
+
+- 私はパッケージ開発だけでなく、**研究用のプログラミングを教えること**に興味がある
+  - 授業で学ぶコンピューターサイエンスではなく、研究者が実際に使う**ツール**や**ベストプラクティス**
+
+- アメリカを始め、海外では「Software Carpentry」（SWC）という**研究者向けワークショップ**が最近とても人気になっている
+  - そもそも私がBiopackathonに参加できるようになったのは、SWCがきっかけ　
+
+## Software Carpentry (SWC)とは？
+
+- 研究者が研究者（大学院生、ポスドクなど）に教えるワークショップ
+
+- 無料（あるいは、少額の参加費）
+
+- ワークショップの内容が全てGitHubでオープンに管理されている
+  - CC-BY ライセンス（誰でも自由に使える）
+
+## アメリカで始まったが、徐々に世界中に広がっている
+
+## でも、まだ翻訳システムが成立していない
+
+## ワークショップの内容はRパッケージによってレンダーされている
+
+- 形式を気にしないで、内容だけに集中できる
+
+- GitHub Actions によってサイトが自動的にレンダーされ、サーブされる
+
+## 翻訳を書くのは、Crowdinを使う
+
+- 数多くの参加者が簡単に翻訳できるシステム
+
+- ワークショップの内容はQuarto Markdownで書かれているが、Crowdinのパーサーによって内容だけを翻訳できる(Markdown記号が出て来ない)
+
+## dovetailが自動的に翻訳されたサイトをレンダーする
+
+- GitHub Actions で言語を選択すると、選ばれた言語に翻訳されたサイトが出来上がる
+
+- ローカル（自分のパソコン）でも可能
