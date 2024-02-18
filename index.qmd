@@ -69,7 +69,7 @@ options(width = 80)
 
 - 研究テーマ：**シダ植物**の<br>進化、生態学
 
-- 趣味：マラソン
+- Rパッケージ：[dwctaxon](https://github.com/ropensci/dwctaxon)、[canaper](https://github.com/ropensci/canaper)、[taxastand](https://github.com/joelnitta/taxastand)
 :::
 ::: {.column}
 ![](https://github.com/joelnitta/joelnitta-site/blob/master/static/media/headers/research_img2.jpg?raw=true){height="500"}
